@@ -1,0 +1,82 @@
+#!/bin/bash
+# Smart File Organizer - Main Command Interface
+# Intelligently organizes your digital files with zero cognitive overhead
+
+cd "$(dirname "$0")"
+
+echo "🗂️  Smart File Organizer"
+echo ""
+
+if [ "$#" -eq 0 ]; then
+    echo "Transform your cluttered folders into organized systems automatically."
+    echo ""
+    echo "Usage:"
+    echo "  ./organize [command] [options]"
+    echo ""
+    echo "📂 Basic Organization:"
+    echo "  ./organize downloads              # Organize Downloads folder"
+    echo "  ./organize folder ~/Desktop       # Organize any folder"
+    echo "  ./organize folder ~/Desktop --dry-run  # Preview changes first"
+    echo "  ./organize documents              # Organize Documents folder"
+    echo ""
+    echo "📷 Screenshot Intelligence:"
+    echo "  ./organize screenshots            # Smart screenshot organization"
+    echo "  ./organize screenshots --dry-run  # Preview screenshot organization"
+    echo "  ./organize actions                # Convert screenshots to actionable items"
+    echo ""
+    echo "🔧 Advanced Features:"
+    echo "  ./organize subfolders all         # Organize loose files in all categories"
+    echo "  ./organize subfolders medical     # Organize specific category"
+    echo "  ./organize links list             # Manage quick access links"
+    echo ""
+    echo "💡 Pro Tips:"
+    echo "  • Always use --dry-run first to preview changes"
+    echo "  • The system learns from your file patterns over time"
+    echo "  • Check docs/ folder for advanced configuration options"
+    echo ""
+    exit 0
+fi
+
+COMMAND="$1"
+shift
+
+case "$COMMAND" in
+    "downloads")
+        python3 scripts/downloads_organizer.py "$@"
+        ;;
+    "folder")
+        if [ "$#" -eq 0 ]; then
+            echo "❌ Please specify a folder path"
+            echo ""
+            echo "Usage: ./organize folder <path> [--dry-run]"
+            echo "Examples:"
+            echo "  ./organize folder ~/Desktop --dry-run"
+            echo "  ./organize folder ~/Documents"
+            echo "  ./organize folder '/path with spaces'"
+        else
+            python3 scripts/universal_organizer.py "$@"
+        fi
+        ;;
+    "screenshots")
+        python3 scripts/screenshot_organizer.py "$@"
+        ;;
+    "actions")
+        python3 scripts/action_processor.py "$@"
+        ;;
+    "subfolders")
+        python3 scripts/subfolder_organizer.py "$@"
+        ;;
+    "links")
+        echo "🔗 Quick access links feature coming soon!"
+        echo "This will help manage frequently accessed folders."
+        ;;
+    "help"|"-h"|"--help")
+        $0  # Show help by running without arguments
+        ;;
+    *)
+        echo "❌ Unknown command: $COMMAND"
+        echo ""
+        echo "Run './organize' without arguments to see all available commands."
+        echo "Or try './organize help' for detailed usage information."
+        ;;
+esac

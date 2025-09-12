@@ -1,0 +1,33 @@
+# Logs and temporary files
+logs/
+*.log
+.DS_Store
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# System files
+Icon?
+.Spotlight-V100
+.Trashes
+
+# Config files with sensitive data (keep template)
+config.json
+
+# Test files
+test_files/
+examples/sample_*
+
+# Organization output (users will have their own)
+organized_files/
