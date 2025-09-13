@@ -1,6 +1,13 @@
 # Smart File Organizer
 
-**A comprehensive file organization system that intelligently categorizes and manages your digital files with zero cognitive overhead.**
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Website-blue?style=for-the-badge)](https://smart-file-organizer-website.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/taiscoding/smart-file-organizer)
+
+**🌐 [Try the Interactive Demo](https://smart-file-organizer-website.vercel.app)** | **📋 [Request Features](https://smart-file-organizer-website.vercel.app/community)** | **📧 [Get Updates](https://smart-file-organizer-website.vercel.app/#newsletter)**
+
+---
+
+A comprehensive file organization system that intelligently categorizes and manages your digital files with zero cognitive overhead.
 
 Transform your cluttered downloads, desktop, and document folders into a clean, organized system that works automatically. Built for professionals who need their files organized but don't want to think about it.
 
