@@ -1,0 +1,97 @@
+{
+  "name": "smart-file-organizer-desktop",
+  "version": "2.1.0",
+  "description": "Universal NLU-Enhanced File Organizer - Intelligent content analysis that works for everyone with medical specialization bonus",
+  "main": "src/main/main.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently \"npm run dev:react\" \"wait-on http://localhost:3000 && electron .\"",
+    "dev:react": "react-scripts start",
+    "build": "react-scripts build",
+    "build:electron": "npm run build && electron-builder",
+    "build:mac": "npm run build && electron-builder --mac",
+    "build:win": "npm run build && electron-builder --win",
+    "build:linux": "npm run build && electron-builder --linux",
+    "pack": "electron-builder --dir",
+    "dist": "npm run build && electron-builder --publish=never",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "com.taiscoding.smart-file-organizer",
+    "productName": "Smart File Organizer",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "src/main/**/*",
+      "src/python/**/*",
+      "node_modules/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "src/python",
+        "to": "python"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "assets/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "assets/icon.png",
+      "target": "AppImage"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "cross-spawn": "^7.0.3",
+    "electron": "^25.0.0",
+    "electron-is-dev": "^2.0.0",
+    "electron-updater": "^6.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.4",
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.2.2",
+    "electron-builder": "^24.6.3",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "wait-on": "^7.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
