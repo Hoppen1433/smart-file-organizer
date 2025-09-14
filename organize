@@ -1,0 +1,100 @@
+#!/bin/bash
+# Smart File Organizer - Main Command Interface
+# Intelligently organizes your digital files with zero cognitive overhead
+# Now with healthcare-enhanced medical file recognition
+
+cd "$(dirname "$0")"
+
+echo "🗂️  Smart File Organizer"
+echo ""
+
+if [ "$#" -eq 0 ]; then
+    echo "Transform your cluttered folders into organized systems automatically."
+    echo ""
+    echo "Usage:"
+    echo "  ./organize [downloads|folder|healthcare|query|screenshots|subfolders] [options]"
+    echo ""
+    echo "🚀 Quick Commands:"
+    echo "  ./organize downloads              # Organize Downloads folder"
+    echo "  ./organize folder ~/Desktop       # Organize any folder"
+    echo "  ./organize healthcare ~/Medical   # Healthcare-enhanced organization"
+    echo "  ./organize query 'cardiology 2024' # AI query medical files"
+    echo "  ./organize screenshots            # Smart screenshot organization"
+    echo "  ./organize subfolders all         # Organize within categories"
+    echo ""
+    echo "🏥 Healthcare Features:"
+    echo "  • Medical imaging (DICOM, CT, MRI, X-rays)"
+    echo "  • Laboratory results (CBC, CMP, pathology)"
+    echo "  • Clinical documentation (H&P, progress notes)"
+    echo "  • Genomics data (VCF, BAM, FASTQ)"
+    echo "  • Medication records and research files"
+    echo ""
+    echo "💡 Add --dry-run to preview changes before organizing"
+    echo ""
+    exit 0
+fi
+
+COMMAND="$1"
+shift
+
+case "$COMMAND" in
+    "downloads")
+        ./scripts/downloads_organizer.py "$@"
+        ;;
+    "folder")
+        if [ "$#" -eq 0 ]; then
+            echo "❌ Please specify a folder path"
+            echo "Usage: ./organize folder <path> [--dry-run]"
+            echo "Example: ./organize folder ~/Desktop --dry-run"
+        else
+            ./scripts/universal_organizer.py "$@"
+        fi
+        ;;
+    "healthcare")
+        if [ "$#" -eq 0 ]; then
+            echo "❌ Please specify a folder path"
+            echo "Usage: ./organize healthcare <path> [--dry-run]"
+            echo "Example: ./organize healthcare ~/Medical --dry-run"
+            echo ""
+            echo "🏥 Healthcare-Enhanced Organization:"
+            echo "   • Medical imaging (DICOM, CT, MRI, X-rays)"
+            echo "   • Laboratory results (CBC, CMP, pathology)"
+            echo "   • Clinical documentation (H&P, progress notes)"
+            echo "   • Genomics data (VCF, BAM, FASTQ)"
+            echo "   • Medication records"
+            echo "   • Medical research files"
+        else
+            ./scripts/healthcare_enhanced_organizer.py "$@"
+        fi
+        ;;
+    "query")
+        if [ "$#" -eq 0 ]; then
+            echo "❌ Please specify a query"
+            echo "Usage: ./organize query \"search terms\""
+            echo "Example: ./organize query \"cardiology files from 2024\""
+            echo ""
+            echo "🔍 Available query types:"
+            echo "   • Time-based: \"files from 2024\", \"recent lab results\""
+            echo "   • Category: \"imaging studies\", \"clinical notes\""
+            echo "   • Medical: \"cardiology\", \"abnormal values\""
+            echo ""
+            echo "💡 First run: ./organize healthcare ~/Medical to enable queries"
+        else
+            ./scripts/medical_query_system.py query "$@"
+        fi
+        ;;
+    "screenshots")
+        ./scripts/screenshot_organizer.py "$@"
+        ;;
+    "subfolders")
+        ./scripts/subfolder_organizer.py "$@"
+        ;;
+    "index")
+        echo "🔍 Indexing medical files for AI queries..."
+        ./scripts/medical_query_system.py index
+        ;;
+    *)
+        echo "❌ Unknown command: $COMMAND"
+        echo "Use ./organize without arguments for help"
+        ;;
+esac
